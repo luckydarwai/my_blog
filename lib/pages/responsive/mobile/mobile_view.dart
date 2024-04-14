@@ -1,5 +1,7 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:my_blog/pages/home_page.dart';
+import 'package:my_blog/pages/responsive/mobile/welcome_mobile.dart';
 import 'package:my_blog/utils/colors.dart';
 import 'package:sidebarx/sidebarx.dart';
 
@@ -104,7 +106,18 @@ class MobileView extends StatelessWidget {
       ),
       appBar: AppBar(
         backgroundColor: Colors.white70,
-        title: Expanded(child: Text('LUCKY')),
+        title: Expanded(
+            child: Row(
+          children: [
+            Text(
+              'LUCKY',
+              style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold),
+            ),
+          ],
+        )),
       ),
       body: Container(
         child: SingleChildScrollView(
@@ -112,9 +125,9 @@ class MobileView extends StatelessWidget {
             // mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Container(
-                height: 100,
-                child: HomePage(),
-              )
+                child: HomePageMobile(),
+              ),
+              Container(child: WelcomeMobile())
             ],
           ),
         ),

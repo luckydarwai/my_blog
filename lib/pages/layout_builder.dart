@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_blog/pages/responsive/laptop_view.dart';
-import 'package:my_blog/pages/responsive/mobile_view.dart';
+import 'package:my_blog/pages/responsive/laptop/laptop_view.dart';
+import 'package:my_blog/pages/responsive/mobile/mobile_view.dart';
 
 class LayoutBuilderClass extends StatelessWidget {
   @override
