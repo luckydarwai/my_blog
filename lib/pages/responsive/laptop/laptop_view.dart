@@ -1,7 +1,10 @@
+import 'dart:developer';
+
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:my_blog/pages/home_page.dart';
 import 'package:my_blog/pages/responsive/laptop/welcome_laptop.dart';
+import 'package:my_blog/pages/services.dart';
 import 'package:my_blog/utils/styles.dart';
 
 class LaptopView extends StatefulWidget {
@@ -63,7 +66,10 @@ class _LaptopViewState extends State<LaptopView> {
                   isHoverService = value;
                 });
               },
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (ctx) => MyServices()));
+              },
               child: Text(
                 "SERVICES",
                 style: navBarStyle.copyWith(
@@ -120,7 +126,11 @@ class _LaptopViewState extends State<LaptopView> {
               Container(
                 height: MediaQuery.of(context).size.height,
                 child: WelcomeLaptop(),
-              )
+              ),
+              Container(
+                height: MediaQuery.of(context).size.height,
+                child: MyServices(),
+              ),
             ],
           ),
         ),

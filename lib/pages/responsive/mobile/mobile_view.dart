@@ -107,17 +107,12 @@ class MobileView extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white70,
         title: Expanded(
-            child: Row(
-          children: [
-            Text(
-              'LUCKY',
-              style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold),
-            ),
-          ],
-        )),
+          child: Text(
+            'LUCKY',
+            style: TextStyle(
+                color: Colors.black, fontSize: 25, fontWeight: FontWeight.bold),
+          ),
+        ),
       ),
       body: Container(
         child: SingleChildScrollView(
